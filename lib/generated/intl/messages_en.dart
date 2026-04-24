@@ -23,6 +23,14 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "contact_tab": MessageLookupByLibrary.simpleMessage("Contact"),
+    "contact_us_btn": MessageLookupByLibrary.simpleMessage("Contact Us"),
+    "download_btn": MessageLookupByLibrary.simpleMessage("Download Now"),
+    "hero_desc": MessageLookupByLibrary.simpleMessage(
+      "Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency",
+    ),
+    "hero_title": MessageLookupByLibrary.simpleMessage(
+      "The Ultimate Platform for Recycling Trade Management",
+    ),
     "lang_btn": MessageLookupByLibrary.simpleMessage("Language"),
     "mission_tab": MessageLookupByLibrary.simpleMessage("Mission"),
     "story_tab": MessageLookupByLibrary.simpleMessage("Story"),

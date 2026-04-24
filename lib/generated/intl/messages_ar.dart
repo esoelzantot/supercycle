@@ -23,6 +23,14 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "contact_tab": MessageLookupByLibrary.simpleMessage("التواصل"),
+    "contact_us_btn": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
+    "download_btn": MessageLookupByLibrary.simpleMessage("نزله الأن"),
+    "hero_desc": MessageLookupByLibrary.simpleMessage(
+      "سوبر سايكل يجمع التجار والموردين والمناديب في مكان واحد. نظّم دورتك التجارية، تتبع الأسعار لحظياً، وحوّل عملك التقليدي إلى نظام رقمي متكامل يضمن لك الكفاءة والربح",
+    ),
+    "hero_title": MessageLookupByLibrary.simpleMessage(
+      "المنصة الأذكى لإدارة تجارة \"الدشت\" وإعادة التدوير",
+    ),
     "lang_btn": MessageLookupByLibrary.simpleMessage("اللغة"),
     "mission_tab": MessageLookupByLibrary.simpleMessage("هدفنا"),
     "story_tab": MessageLookupByLibrary.simpleMessage("قصتنا"),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:supercycle_site/core/cubits/local_cubit.dart';
+import 'package:supercycle_site/core/theme/app_styles.dart';
 import 'package:supercycle_site/features/home/presentation/widget/header/language_menu_item.dart';
 import 'package:supercycle_site/generated/l10n.dart';
 
@@ -80,12 +81,25 @@ class _LangActionBtnState extends State<LangActionBtn> {
               color: _hovered ? Colors.grey.shade100 : Colors.transparent,
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Icon(
-              Icons.language_rounded,
-              size: 20,
-              color: _hovered
-                  ? Color(0xFF3D4A5C).withValues(alpha: 0.7)
-                  : Color(0xFF3D4A5C),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.language_rounded,
+                  size: 20,
+                  color: _hovered
+                      ? Color(0xFF3D4A5C).withValues(alpha: 0.7)
+                      : Color(0xFF3D4A5C),
+                ),
+                SizedBox(width: 8),
+                Text(
+                  S.of(context).lang_btn,
+                  style: AppStyles.styleMedium18(context).copyWith(
+                    color: _hovered
+                        ? Color(0xFF3D4A5C).withValues(alpha: 0.7)
+                        : Color(0xFF3D4A5C),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

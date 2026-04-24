@@ -78,6 +78,46 @@ class S {
   String get lang_btn {
     return Intl.message('Language', name: 'lang_btn', desc: '', args: []);
   }
+
+  /// `Contact Us`
+  String get contact_us_btn {
+    return Intl.message(
+      'Contact Us',
+      name: 'contact_us_btn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Download Now`
+  String get download_btn {
+    return Intl.message(
+      'Download Now',
+      name: 'download_btn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The Ultimate Platform for Recycling Trade Management`
+  String get hero_title {
+    return Intl.message(
+      'The Ultimate Platform for Recycling Trade Management',
+      name: 'hero_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency`
+  String get hero_desc {
+    return Intl.message(
+      'Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency',
+      name: 'hero_desc',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

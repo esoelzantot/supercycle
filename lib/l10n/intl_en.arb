@@ -3,5 +3,12 @@
   "mission_tab": "Mission",
   "story_tab": "Story",
   "contact_tab": "Contact",
-  "lang_btn": "Language"
+  "lang_btn": "Language",
+
+  "contact_us_btn": "Contact Us",
+  "download_btn": "Download Now",
+
+  "hero_title": "The Ultimate Platform for Recycling Trade Management",
+  "hero_desc": "Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency"
+
 }

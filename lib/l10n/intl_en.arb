@@ -1,1 +1,7 @@
-{}
+{
+  "vision_tab": "Vision",
+  "mission_tab": "Mission",
+  "story_tab": "Story",
+  "contact_tab": "Contact",
+  "lang_btn": "Language"
+}

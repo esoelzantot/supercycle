@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:supercycle_site/features/home/presentation/widget/header/custom_drawer.dart';
 import 'package:supercycle_site/features/home/presentation/widget/header/home_screen_mobile_header.dart';
+import 'package:supercycle_site/features/home/presentation/widget/hero/mobile_hero_section.dart';
 
 class HomeScreenMobile extends StatefulWidget {
   const HomeScreenMobile({super.key});
@@ -21,7 +22,9 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
       children: [
         // ── Main Content ──────────────────────────────────────
         CustomScrollView(
-          slivers: [SliverToBoxAdapter(child: SizedBox(height: 90))],
+          slivers: [
+            SliverToBoxAdapter(child: MobileHeroSection(paddingTop: 90)),
+          ],
         ),
 
         // ── Fixed Header ──────────────────────────────────────

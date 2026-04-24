@@ -33,7 +33,7 @@ class _GhostButtonState extends State<GhostButton> {
           widget.label,
           style: AppStyles.styleSemiBold18(
             context,
-          ).copyWith(color: AppColors.primary),
+          ).copyWith(color: AppColors.primary, decoration: TextDecoration.none),
         ),
       ),
     ),

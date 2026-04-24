@@ -41,7 +41,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
           widget.label,
           style: AppStyles.styleSemiBold18(
             context,
-          ).copyWith(color: Colors.white),
+          ).copyWith(color: Colors.white, decoration: TextDecoration.none),
         ),
       ),
     ),

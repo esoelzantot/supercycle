@@ -4,8 +4,8 @@ import 'package:supercycle_site/core/theme/app_colors.dart';
 
 abstract class AppStyles {
   static const fontFamily = 'Beiruti';
-  static const textHeight = 1.5;
-  static const letterSpacing = 1.2;
+  static const textHeight = 1.4;
+  static const letterSpacing = 1.4;
 
   // Styles 12
   static TextStyle styleRegular12(BuildContext context) {

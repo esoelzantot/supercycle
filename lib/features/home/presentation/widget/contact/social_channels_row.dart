@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:supercycle_site/core/functions/lanuch_whatsApp.dart';
 import 'package:supercycle_site/core/functions/launch_email.dart';
@@ -277,19 +276,11 @@ void handleOnTap({required String label, required BuildContext context}) async {
       launchUrlFunc(Channels.linkedin);
       break;
     case 'Email':
-      if (kIsWeb) {
-        await sendEmail(
-          email: Channels.email,
-          subject: "مشاركة تأكيد الحجز",
-          body: "مرحبا",
-        );
-      } else {
-        await launchEmail(
-          email: Channels.email,
-          subject: "مشاركة تأكيد الحجز",
-          body: "مرحبا",
-        );
-      }
+      await sendEmail(
+        email: Channels.email,
+        subject: "مشاركة تأكيد الحجز",
+        body: "Hell0000",
+      );
       break;
     default:
   }

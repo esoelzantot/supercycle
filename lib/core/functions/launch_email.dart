@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> sendEmail({
@@ -5,51 +6,41 @@ Future<void> sendEmail({
   required String subject,
   required String body,
 }) async {
-  if (email.isEmpty) {
-    throw Exception('Email cannot be empty');
-  }
+  if (email.isEmpty) throw Exception('Email cannot be empty');
 
-  /// Gmail Web (Fallback)
-  final Uri gmailWebUri = Uri.parse(
-    'https://mail.google.com/mail/?view=cm'
-    '&to=$email'
-    '&su=${Uri.encodeComponent(subject)}'
-    '&body=${Uri.encodeComponent(body)}',
-  );
+  if (kIsWeb) {
+    // على الويب → افتح Gmail Web مباشرة في تاب جديد
+    final Uri gmailWebUri = Uri.parse(
+      'https://mail.google.com/mail/?view=cm'
+      '&to=${Uri.encodeComponent(email)}'
+      '&su=${Uri.encodeComponent(subject)}'
+      '&body=${Uri.encodeComponent(body)}',
+    );
 
-  /// Mailto (Preferred)
-  final Uri mailtoUri = Uri(
-    scheme: 'mailto',
-    path: email,
-    queryParameters: {'subject': subject, 'body': body},
-  );
-
-  try {
-    await launchUrl(mailtoUri, mode: LaunchMode.externalApplication);
-  } catch (e) {
-    throw Exception('Could not launch email client: $e');
-  }
-}
-
-Future<void> launchEmail({
-  required String email,
-  required String subject,
-  required String body,
-}) async {
-  if (email.isEmpty) {
-    throw 'Email cannot be empty';
-  }
-
-  final Uri gmailUri = Uri(
-    scheme: 'https',
-    host: 'mail.google.com',
-    path: '/mail/',
-    queryParameters: {'view': 'cm', 'to': email, 'su': subject, 'body': body},
-  );
-
-  if (await canLaunchUrl(gmailUri)) {
-    await launchUrl(gmailUri, mode: LaunchMode.externalApplication);
+    if (await canLaunchUrl(gmailWebUri)) {
+      await launchUrl(gmailWebUri, mode: LaunchMode.externalApplication);
+    } else {
+      throw Exception('Could not open Gmail Web');
+    }
   } else {
-    throw 'Could not open Gmail';
+    // على الموبايل → جرب Gmail App الأول، لو مش موجود افتح Gmail Web
+    final Uri gmailAppUri = Uri.parse(
+      'googlegmail://co?to=${Uri.encodeComponent(email)}'
+      '&subject=${Uri.encodeComponent(subject)}'
+      '&body=${Uri.encodeComponent(body)}',
+    );
+
+    final Uri gmailWebUri = Uri.parse(
+      'https://mail.google.com/mail/?view=cm'
+      '&to=${Uri.encodeComponent(email)}'
+      '&su=${Uri.encodeComponent(subject)}'
+      '&body=${Uri.encodeComponent(body)}',
+    );
+
+    if (await canLaunchUrl(gmailAppUri)) {
+      await launchUrl(gmailAppUri, mode: LaunchMode.externalApplication);
+    } else {
+      await launchUrl(gmailWebUri, mode: LaunchMode.externalApplication);
+    }
   }
 }

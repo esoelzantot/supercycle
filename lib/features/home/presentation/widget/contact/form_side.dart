@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:supercycle_site/core/functions/lanuch_whatsApp.dart';
 import 'package:supercycle_site/core/functions/launch_email.dart';
@@ -54,19 +53,11 @@ class _FormSideState extends State<FormSide> {
           );
           break;
         case ShareMethod.email:
-          if (kIsWeb) {
-            await sendEmail(
-              email: Channels.email,
-              subject: "مشاركة تأكيد الحجز",
-              body: "Hell0000",
-            );
-          } else {
-            await launchEmail(
-              email: Channels.email,
-              subject: "مشاركة تأكيد الحجز",
-              body: "Hell0000",
-            );
-          }
+          await sendEmail(
+            email: Channels.email,
+            subject: "مشاركة تأكيد الحجز",
+            body: "Hell0000",
+          );
       }
       setState(() => _submitted = true);
     }

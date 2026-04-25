@@ -8,39 +8,58 @@ Future<void> sendEmail({
 }) async {
   if (email.isEmpty) throw Exception('Email cannot be empty');
 
-  if (kIsWeb) {
-    // على الويب → افتح Gmail Web مباشرة في تاب جديد
-    final Uri gmailWebUri = Uri.parse(
-      'https://mail.google.com/mail/?view=cm'
-      '&to=${Uri.encodeComponent(email)}'
-      '&su=${Uri.encodeComponent(subject)}'
-      '&body=${Uri.encodeComponent(body)}',
-    );
+  final encodedEmail = Uri.encodeComponent(email);
+  final encodedSubject = Uri.encodeComponent(subject);
+  final encodedBody = Uri.encodeComponent(body);
 
-    if (await canLaunchUrl(gmailWebUri)) {
+  // Gmail Web
+  final Uri gmailWebUri = Uri.parse(
+    'https://mail.google.com/mail/?view=cm'
+    '&to=$encodedEmail'
+    '&su=$encodedSubject'
+    '&body=$encodedBody',
+  );
+
+  // Gmail App (Mobile)
+  final Uri gmailAppUri = Uri.parse(
+    'googlegmail://co?to=$encodedEmail'
+    '&subject=$encodedSubject'
+    '&body=$encodedBody',
+  );
+
+  // Mailto (Fallback قوي جدًا)
+  final Uri mailtoUri = Uri.parse(
+    'mailto:$encodedEmail?subject=$encodedSubject&body=$encodedBody',
+  );
+
+  try {
+    if (kIsWeb) {
+      // 🔥 Web → نفرق Mobile vs Desktop
+      final isMobileWeb =
+          defaultTargetPlatform == TargetPlatform.iOS ||
+          defaultTargetPlatform == TargetPlatform.android;
+
+      if (isMobileWeb) {
+        // 👉 موبايل → يفتح Gmail App لو موجود
+        if (await canLaunchUrl(gmailAppUri)) {
+          await launchUrl(gmailAppUri, mode: LaunchMode.externalApplication);
+          return;
+        }
+      }
+
+      // 👉 Desktop Web (أو fallback)
       await launchUrl(gmailWebUri, mode: LaunchMode.externalApplication);
     } else {
-      throw Exception('Could not open Gmail Web');
+      // 📱 Native Mobile
+      if (await canLaunchUrl(gmailAppUri)) {
+        await launchUrl(gmailAppUri, mode: LaunchMode.externalApplication);
+      } else if (await canLaunchUrl(mailtoUri)) {
+        await launchUrl(mailtoUri);
+      } else {
+        await launchUrl(gmailWebUri, mode: LaunchMode.externalApplication);
+      }
     }
-  } else {
-    // على الموبايل → جرب Gmail App الأول، لو مش موجود افتح Gmail Web
-    final Uri gmailAppUri = Uri.parse(
-      'googlegmail://co?to=${Uri.encodeComponent(email)}'
-      '&subject=${Uri.encodeComponent(subject)}'
-      '&body=${Uri.encodeComponent(body)}',
-    );
-
-    final Uri gmailWebUri = Uri.parse(
-      'https://mail.google.com/mail/?view=cm'
-      '&to=${Uri.encodeComponent(email)}'
-      '&su=${Uri.encodeComponent(subject)}'
-      '&body=${Uri.encodeComponent(body)}',
-    );
-
-    if (await canLaunchUrl(gmailAppUri)) {
-      await launchUrl(gmailAppUri, mode: LaunchMode.externalApplication);
-    } else {
-      await launchUrl(gmailWebUri, mode: LaunchMode.externalApplication);
-    }
+  } catch (e) {
+    throw Exception('Failed to send email: $e');
   }
 }

@@ -53,10 +53,11 @@ class _FormSideState extends State<FormSide> {
           );
           break;
         case ShareMethod.email:
-          await sendEmail(
+          await sendMail(
             email: Channels.email,
             subject: "مشاركة تأكيد الحجز",
             body: "Hell0000",
+            context: context,
           );
       }
       setState(() => _submitted = true);

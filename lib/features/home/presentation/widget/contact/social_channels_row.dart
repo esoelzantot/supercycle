@@ -276,10 +276,11 @@ void handleOnTap({required String label, required BuildContext context}) async {
       launchUrlFunc(Channels.linkedin);
       break;
     case 'Email':
-      await sendEmail(
+      await sendMail(
         email: Channels.email,
         subject: "مشاركة تأكيد الحجز",
         body: "Hell0000",
+        context: context,
       );
       break;
     default:

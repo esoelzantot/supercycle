@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> sendMail({
@@ -22,7 +23,9 @@ Future<void> sendMail({
     'https://mail.google.com/mail/?view=cm&to=$email&su=$encodedSubject&body=$encodedBody',
   );
 
-  await launchUrl(mailto);
+  if (!kIsWeb) {
+    await launchUrl(mailto);
+  }
 
   if (await canLaunchUrl(gmailApp)) {
     await launchUrl(gmailApp);

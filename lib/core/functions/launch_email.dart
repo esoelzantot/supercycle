@@ -1,5 +1,5 @@
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> sendMail({
@@ -23,7 +23,7 @@ Future<void> sendMail({
     'https://mail.google.com/mail/?view=cm&to=$email&su=$encodedSubject&body=$encodedBody',
   );
 
-  if (!kIsWeb) {
+  if (await isMobileBrowser()) {
     await launchUrl(mailto);
   }
 
@@ -36,4 +36,15 @@ Future<void> sendMail({
     await launchUrl(gmailWeb, mode: LaunchMode.externalApplication);
     return;
   }
+}
+
+Future<bool> isMobileBrowser() async {
+  final deviceInfo = DeviceInfoPlugin();
+  final webInfo = await deviceInfo.webBrowserInfo;
+
+  final userAgent = webInfo.userAgent?.toLowerCase() ?? '';
+
+  return userAgent.contains('android') ||
+      userAgent.contains('iphone') ||
+      userAgent.contains('mobile');
 }

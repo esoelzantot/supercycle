@@ -6,7 +6,15 @@ import 'package:supercycle_site/features/home/presentation/widget/header/languag
 import 'package:supercycle_site/generated/l10n.dart';
 
 class LangActionBtn extends StatefulWidget {
-  const LangActionBtn({super.key});
+  final bool showLabel;
+  final double iconSize;
+  final Color iconColor;
+  const LangActionBtn({
+    super.key,
+    this.showLabel = true,
+    this.iconSize = 20,
+    this.iconColor = const Color(0xFF3D4A5C),
+  });
 
   @override
   State<LangActionBtn> createState() => _LangActionBtnState();
@@ -85,20 +93,21 @@ class _LangActionBtnState extends State<LangActionBtn> {
               children: [
                 Icon(
                   Icons.language_rounded,
-                  size: 20,
+                  size: widget.iconSize,
                   color: _hovered
                       ? Color(0xFF3D4A5C).withValues(alpha: 0.7)
-                      : Color(0xFF3D4A5C),
+                      : widget.iconColor,
                 ),
-                SizedBox(width: 8),
-                Text(
-                  S.of(context).lang_btn,
-                  style: AppStyles.styleMedium18(context).copyWith(
-                    color: _hovered
-                        ? Color(0xFF3D4A5C).withValues(alpha: 0.7)
-                        : Color(0xFF3D4A5C),
+                if (widget.showLabel) SizedBox(width: 8),
+                if (widget.showLabel)
+                  Text(
+                    S.of(context).lang_btn,
+                    style: AppStyles.styleMedium18(context).copyWith(
+                      color: _hovered
+                          ? Color(0xFF3D4A5C).withValues(alpha: 0.7)
+                          : Color(0xFF3D4A5C),
+                    ),
                   ),
-                ),
               ],
             ),
           ),

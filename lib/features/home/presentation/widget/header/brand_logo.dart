@@ -11,7 +11,7 @@ class BrandLogo extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(AppAssets.logoIcon, fit: BoxFit.cover),
-          SizedBox(width: 2),
+          // SizedBox(width: 2),
           Image.asset(AppAssets.logoName, fit: BoxFit.cover),
         ],
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supercycle_site/core/helpers/app_waiting_dialog.dart';
 import 'package:supercycle_site/core/theme/app_assets.dart';
 import 'package:supercycle_site/core/theme/app_styles.dart';
 import 'package:supercycle_site/features/home/presentation/widget/buttons/ghost_button.dart';
@@ -204,7 +205,10 @@ class _CopyBlock extends StatelessWidget {
           runSpacing: 12,
           children: [
             PrimaryButton(label: S.of(context).contact_us_btn, onTap: () {}),
-            GhostButton(label: S.of(context).download_btn, onTap: () {}),
+            GhostButton(
+              label: S.of(context).download_btn,
+              onTap: () => AppWaitingDialog.show(context),
+            ),
           ],
         ),
 

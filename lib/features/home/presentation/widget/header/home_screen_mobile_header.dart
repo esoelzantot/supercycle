@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:supercycle_site/core/theme/app_colors.dart';
 import 'package:supercycle_site/features/home/presentation/widget/header/brand_logo.dart';
+import 'package:supercycle_site/features/home/presentation/widget/header/contact_action_btn.dart';
+import 'package:supercycle_site/features/home/presentation/widget/header/lang_action_btn.dart';
 
 class HomeScreenMobileHeader extends StatelessWidget
     implements PreferredSizeWidget {
-  final VoidCallback? onMenuTap;
-
-  const HomeScreenMobileHeader({super.key, this.onMenuTap});
+  const HomeScreenMobileHeader({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(70);
@@ -15,7 +14,7 @@ class HomeScreenMobileHeader extends StatelessWidget
   Widget build(BuildContext context) {
     return Container(
       height: 90,
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       decoration: BoxDecoration(
         color: Color(0xffFFFFFF).withValues(alpha: 0.3),
         borderRadius: BorderRadius.circular(16),
@@ -34,22 +33,12 @@ class HomeScreenMobileHeader extends StatelessWidget
               child: BrandLogo(),
             ),
 
-            /// ── Drawer Icon Button ──
-            GestureDetector(
-              onTap: onMenuTap,
-              child: Container(
-                width: 42,
-                height: 42,
-                decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Icon(
-                  Icons.menu_rounded,
-                  color: Colors.white,
-                  size: 22,
-                ),
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                LangActionBtn(showLabel: false, iconSize: 22),
+                ContactActionBtn(showLabel: false, iconSize: 22),
+              ],
             ),
           ],
         ),

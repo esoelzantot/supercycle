@@ -118,6 +118,146 @@ class S {
       args: [],
     );
   }
+
+  /// `Contact Us`
+  String get contact_us_title {
+    return Intl.message(
+      'Contact Us',
+      name: 'contact_us_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact Us Now`
+  String get contact_us_desc {
+    return Intl.message(
+      'Contact Us Now',
+      name: 'contact_us_desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get contact_us_email {
+    return Intl.message('Email', name: 'contact_us_email', desc: '', args: []);
+  }
+
+  /// `Phone`
+  String get contact_us_phone {
+    return Intl.message('Phone', name: 'contact_us_phone', desc: '', args: []);
+  }
+
+  /// `Social Media`
+  String get contact_us_social {
+    return Intl.message(
+      'Social Media',
+      name: 'contact_us_social',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get contact_us_name {
+    return Intl.message(
+      'Full Name',
+      name: 'contact_us_name',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subject`
+  String get contact_us_subject {
+    return Intl.message(
+      'Subject',
+      name: 'contact_us_subject',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get contact_us_message {
+    return Intl.message(
+      'Message',
+      name: 'contact_us_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Message`
+  String get send_msg_btn {
+    return Intl.message(
+      'Send Message',
+      name: 'send_msg_btn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Message Confirmation`
+  String get send_message_dialog_title {
+    return Intl.message(
+      'Send Message Confirmation',
+      name: 'send_message_dialog_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose Sending Method`
+  String get send_message_dialog_subtitle {
+    return Intl.message(
+      'Choose Sending Method',
+      name: 'send_message_dialog_subtitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send via WhatsApp`
+  String get send_message_dialog_whatsapp_option {
+    return Intl.message(
+      'Send via WhatsApp',
+      name: 'send_message_dialog_whatsapp_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send via Email`
+  String get send_message_dialog_email_option {
+    return Intl.message(
+      'Send via Email',
+      name: 'send_message_dialog_email_option',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send_message_dialog_send_button {
+    return Intl.message(
+      'Send',
+      name: 'send_message_dialog_send_button',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get send_message_dialog_cancel_button {
+    return Intl.message(
+      'Cancel',
+      name: 'send_message_dialog_cancel_button',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

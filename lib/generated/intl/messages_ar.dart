@@ -24,6 +24,18 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "contact_tab": MessageLookupByLibrary.simpleMessage("التواصل"),
     "contact_us_btn": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
+    "contact_us_desc": MessageLookupByLibrary.simpleMessage(
+      "فريقنا للدعم الفني",
+    ),
+    "contact_us_email": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني",
+    ),
+    "contact_us_message": MessageLookupByLibrary.simpleMessage("الرسالة"),
+    "contact_us_name": MessageLookupByLibrary.simpleMessage("الأسم بالكامل"),
+    "contact_us_phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+    "contact_us_social": MessageLookupByLibrary.simpleMessage("قنوات التواصل"),
+    "contact_us_subject": MessageLookupByLibrary.simpleMessage("الموضوع"),
+    "contact_us_title": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
     "download_btn": MessageLookupByLibrary.simpleMessage("نزله الأن"),
     "hero_desc": MessageLookupByLibrary.simpleMessage(
       "سوبر سايكل يجمع التجار والموردين والمناديب في مكان واحد. نظّم دورتك التجارية، تتبع الأسعار لحظياً، وحوّل عملك التقليدي إلى نظام رقمي متكامل يضمن لك الكفاءة والربح",
@@ -33,6 +45,25 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "lang_btn": MessageLookupByLibrary.simpleMessage("اللغة"),
     "mission_tab": MessageLookupByLibrary.simpleMessage("هدفنا"),
+    "send_message_dialog_cancel_button": MessageLookupByLibrary.simpleMessage(
+      "إلغاء",
+    ),
+    "send_message_dialog_email_option": MessageLookupByLibrary.simpleMessage(
+      "إرسال عبر الايميل",
+    ),
+    "send_message_dialog_send_button": MessageLookupByLibrary.simpleMessage(
+      "إرسال",
+    ),
+    "send_message_dialog_subtitle": MessageLookupByLibrary.simpleMessage(
+      "اختر طريقة الإرسال",
+    ),
+    "send_message_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "تأكيد إرسال الرسالة",
+    ),
+    "send_message_dialog_whatsapp_option": MessageLookupByLibrary.simpleMessage(
+      "إرسال عبر الواتساب",
+    ),
+    "send_msg_btn": MessageLookupByLibrary.simpleMessage("إرسال الرسالة"),
     "story_tab": MessageLookupByLibrary.simpleMessage("قصتنا"),
     "vision_tab": MessageLookupByLibrary.simpleMessage("رؤيتنا"),
   };

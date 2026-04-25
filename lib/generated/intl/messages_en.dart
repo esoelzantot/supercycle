@@ -24,6 +24,14 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "contact_tab": MessageLookupByLibrary.simpleMessage("Contact"),
     "contact_us_btn": MessageLookupByLibrary.simpleMessage("Contact Us"),
+    "contact_us_desc": MessageLookupByLibrary.simpleMessage("Contact Us Now"),
+    "contact_us_email": MessageLookupByLibrary.simpleMessage("Email"),
+    "contact_us_message": MessageLookupByLibrary.simpleMessage("Message"),
+    "contact_us_name": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "contact_us_phone": MessageLookupByLibrary.simpleMessage("Phone"),
+    "contact_us_social": MessageLookupByLibrary.simpleMessage("Social Media"),
+    "contact_us_subject": MessageLookupByLibrary.simpleMessage("Subject"),
+    "contact_us_title": MessageLookupByLibrary.simpleMessage("Contact Us"),
     "download_btn": MessageLookupByLibrary.simpleMessage("Download Now"),
     "hero_desc": MessageLookupByLibrary.simpleMessage(
       "Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency",
@@ -33,6 +41,25 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "lang_btn": MessageLookupByLibrary.simpleMessage("Language"),
     "mission_tab": MessageLookupByLibrary.simpleMessage("Mission"),
+    "send_message_dialog_cancel_button": MessageLookupByLibrary.simpleMessage(
+      "Cancel",
+    ),
+    "send_message_dialog_email_option": MessageLookupByLibrary.simpleMessage(
+      "Send via Email",
+    ),
+    "send_message_dialog_send_button": MessageLookupByLibrary.simpleMessage(
+      "Send",
+    ),
+    "send_message_dialog_subtitle": MessageLookupByLibrary.simpleMessage(
+      "Choose Sending Method",
+    ),
+    "send_message_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Send Message Confirmation",
+    ),
+    "send_message_dialog_whatsapp_option": MessageLookupByLibrary.simpleMessage(
+      "Send via WhatsApp",
+    ),
+    "send_msg_btn": MessageLookupByLibrary.simpleMessage("Send Message"),
     "story_tab": MessageLookupByLibrary.simpleMessage("Story"),
     "vision_tab": MessageLookupByLibrary.simpleMessage("Vision"),
   };

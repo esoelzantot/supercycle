@@ -133,7 +133,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
           useSafeArea: true,
           padding: widget.padding ?? const EdgeInsets.only(left: 10, right: 10),
           maxHeight: widget.maxHeight!,
-          width: widget.width ?? MediaQuery.of(context).size.width * 0.7,
+          width: widget.width ?? MediaQuery.of(context).size.width * 0.4,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
             color: Colors.white,

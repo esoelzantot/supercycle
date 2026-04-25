@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:supercycle_site/features/home/data/entities/nav_item.dart';
 import 'package:supercycle_site/features/home/presentation/widget/header/home_screen_web_header.dart';
 import 'package:supercycle_site/features/home/presentation/widget/hero/mobile_hero_section.dart';
+import 'package:supercycle_site/features/home/presentation/widget/vision/vision_and_mission_web.dart';
 import 'package:supercycle_site/generated/l10n.dart';
 
 class HomeScreenTablet extends StatefulWidget {
@@ -30,7 +31,12 @@ class _HomeScreenTabletState extends State<HomeScreenTablet> {
         onNavItemTapped: (i) => setState(() => _activeIndex = i),
       ),
       body: CustomScrollView(
-        slivers: [SliverToBoxAdapter(child: MobileHeroSection())],
+        slivers: [
+          SliverToBoxAdapter(child: MobileHeroSection()),
+          SliverToBoxAdapter(child: SizedBox(height: 50)),
+          SliverToBoxAdapter(child: VisionAndMissionWeb()),
+          SliverToBoxAdapter(child: SizedBox(height: 100)),
+        ],
       ),
     );
   }

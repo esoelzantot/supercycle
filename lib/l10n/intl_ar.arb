@@ -9,6 +9,22 @@
   "download_btn": "نزله الأن",
 
   "hero_title": "المنصة الأذكى لإدارة تجارة \"الدشت\" وإعادة التدوير",
-  "hero_desc": "سوبر سايكل يجمع التجار والموردين والمناديب في مكان واحد. نظّم دورتك التجارية، تتبع الأسعار لحظياً، وحوّل عملك التقليدي إلى نظام رقمي متكامل يضمن لك الكفاءة والربح"
+  "hero_desc": "سوبر سايكل يجمع التجار والموردين والمناديب في مكان واحد. نظّم دورتك التجارية، تتبع الأسعار لحظياً، وحوّل عملك التقليدي إلى نظام رقمي متكامل يضمن لك الكفاءة والربح",
 
+  "contact_us_title": "تواصل معنا",
+  "contact_us_desc": "فريقنا للدعم الفني",
+  "contact_us_email": "البريد الإلكتروني",
+  "contact_us_phone": "الهاتف",
+  "contact_us_social": "قنوات التواصل",
+  "contact_us_name": "الأسم بالكامل",
+  "contact_us_subject": "الموضوع",
+  "contact_us_message": "الرسالة",
+  "send_msg_btn": "إرسال الرسالة",
+
+  "send_message_dialog_title": "تأكيد إرسال الرسالة",
+  "send_message_dialog_subtitle": "اختر طريقة الإرسال",
+  "send_message_dialog_whatsapp_option": "إرسال عبر الواتساب",
+  "send_message_dialog_email_option": "إرسال عبر الايميل",
+  "send_message_dialog_send_button": "إرسال",
+  "send_message_dialog_cancel_button": "إلغاء"
 }

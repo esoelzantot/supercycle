@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:supercycle_site/features/home/data/entities/nav_item.dart';
+import 'package:supercycle_site/features/home/presentation/widget/contact/contact_us_section.dart';
 import 'package:supercycle_site/features/home/presentation/widget/header/home_screen_web_header.dart';
 import 'package:supercycle_site/features/home/presentation/widget/hero/web_hero_section.dart';
+import 'package:supercycle_site/features/home/presentation/widget/vision/vision_and_mission_web.dart';
 import 'package:supercycle_site/generated/l10n.dart';
 
 class HomeScreenWeb extends StatefulWidget {
@@ -30,7 +32,14 @@ class _HomeScreenWebState extends State<HomeScreenWeb> {
         onNavItemTapped: (i) => setState(() => _activeIndex = i),
       ),
       body: CustomScrollView(
-        slivers: [SliverToBoxAdapter(child: WebHeroSection())],
+        slivers: [
+          SliverToBoxAdapter(child: WebHeroSection()),
+          SliverToBoxAdapter(child: SizedBox(height: 50)),
+          SliverToBoxAdapter(child: VisionAndMissionWeb()),
+          SliverToBoxAdapter(child: SizedBox(height: 64)),
+          SliverToBoxAdapter(child: ContactUsSection()),
+          SliverToBoxAdapter(child: SizedBox(height: 100)),
+        ],
       ),
     );
   }

@@ -17,7 +17,7 @@ class HomeScreenMobileHeader extends StatelessWidget
       height: 90,
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: BoxDecoration(
-        color: Color(0xffc2c2c2).withValues(alpha: 0.15),
+        color: Color(0xffFFFFFF).withValues(alpha: 0.3),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Padding(

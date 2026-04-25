@@ -13,66 +13,69 @@ class HomeFooterWeb extends StatelessWidget {
       width: double.infinity,
       color: Color(0xff194C3B),
       padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 32),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Column(
         children: [
-          // Left Section - Logo + Brief
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Logo
-                _buildLogo(),
-                const SizedBox(height: 16),
-
-                // Brief
-                Text(
-                  S.of(context).footer_brief,
-                  style: AppStyles.styleSemiBold20(
-                    context,
-                  ).copyWith(color: Color(0xFFCCCCCC)),
-                ),
-                const SizedBox(height: 24),
-
-                // Copyright
-                Text(
-                  S.of(context).footer_Copyright,
-                  style: AppStyles.styleMedium18(
-                    context,
-                  ).copyWith(color: Color(0xFF999999)),
-                ),
-              ],
-            ),
-          ),
-
-          const SizedBox(width: 80),
-
-          // Right Section - Get the App
-          Column(
+          Row(
             crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                'Get the App',
-                style: AppStyles.styleSemiBold20(
-                  context,
-                ).copyWith(color: Colors.white),
+              // Left Section - Logo + Brief
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Logo
+                    _buildLogo(),
+                    const SizedBox(height: 16),
+                    // Brief
+                    Text(
+                      S.of(context).footer_brief,
+                      style: AppStyles.styleSemiBold20(
+                        context,
+                      ).copyWith(color: Color(0xFFCCCCCC)),
+                    ),
+                  ],
+                ),
               ),
-              const SizedBox(height: 12),
-              _AppStoreButton(
-                icon: Icons.apple,
-                topText: 'GET IT ON',
-                bottomText: 'App Store',
-                onTap: () => AppWaitingDialog.show(context),
-              ),
-              const SizedBox(height: 10),
-              _AppStoreButton(
-                icon: Icons.play_arrow_rounded,
-                topText: 'GET IT ON',
-                bottomText: 'Google Play',
-                onTap: () => AppWaitingDialog.show(context),
+
+              const SizedBox(width: 80),
+
+              // Right Section - Get the App
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    S.of(context).footer_download_app,
+                    style: AppStyles.styleSemiBold20(
+                      context,
+                    ).copyWith(color: Colors.white),
+                  ),
+                  const SizedBox(height: 12),
+                  _AppStoreButton(
+                    icon: Icons.apple,
+                    topText: 'GET IT ON',
+                    bottomText: 'App Store',
+                    onTap: () => AppWaitingDialog.show(context),
+                  ),
+                  const SizedBox(height: 10),
+                  _AppStoreButton(
+                    icon: Icons.play_arrow_rounded,
+                    topText: 'GET IT ON',
+                    bottomText: 'Google Play',
+                    onTap: () => AppWaitingDialog.show(context),
+                  ),
+                ],
               ),
             ],
+          ),
+          const SizedBox(height: 24),
+
+          // Copyright
+          Text(
+            S.of(context).footer_Copyright,
+            style: AppStyles.styleMedium18(
+              context,
+            ).copyWith(color: Color(0xFF999999)),
           ),
         ],
       ),

@@ -20,7 +20,7 @@ class InfoSide extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             S.of(context).contact_us_title,
@@ -67,43 +67,50 @@ class InfoSide extends StatelessWidget {
   ) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  label,
-                  style: AppStyles.styleSemiBold18(
-                    context,
-                  ).copyWith(color: Color(0x80FFFFFF)),
-                ),
-                const SizedBox(height: 4),
-                Directionality(
-                  textDirection: TextDirection.ltr,
-                  child: Text(
-                    value,
-                    style: AppStyles.styleSemiBold24(
+      child: Container(
+        color: Colors.blueAccent,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              width: 50,
+              height: 60,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Icon(icon, color: const Color(0xFFa8f0c8), size: 20),
+            ),
+            const SizedBox(width: 12),
+
+            Flexible(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    label,
+                    style: AppStyles.styleSemiBold18(
                       context,
-                    ).copyWith(color: Colors.white),
+                    ).copyWith(color: Color(0x80FFFFFF)),
                   ),
-                ),
-              ],
+                  const SizedBox(height: 4),
+                  Directionality(
+                    textDirection: TextDirection.ltr,
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        value,
+                        style: AppStyles.styleSemiBold24(
+                          context,
+                        ).copyWith(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          const SizedBox(width: 12),
-          Container(
-            width: 50,
-            height: 60,
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.12),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Icon(icon, color: const Color(0xFFa8f0c8), size: 20),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

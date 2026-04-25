@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:supercycle_site/features/home/presentation/widget/contact/form_side.dart';
 import 'package:supercycle_site/features/home/presentation/widget/contact/info_side.dart';
 
-class ContactUsSection extends StatelessWidget {
-  const ContactUsSection({super.key});
+class ContactUsWeb extends StatelessWidget {
+  const ContactUsWeb({super.key});
 
   @override
   Widget build(BuildContext context) {

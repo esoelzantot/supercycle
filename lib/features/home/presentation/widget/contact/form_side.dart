@@ -129,11 +129,14 @@ class _FormSideState extends State<FormSide> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          label,
-          style: AppStyles.styleSemiBold20(
-            context,
-          ).copyWith(color: Color(0xFF666666)),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            label,
+            style: AppStyles.styleSemiBold20(
+              context,
+            ).copyWith(color: Color(0xFF666666)),
+          ),
         ),
         const SizedBox(height: 6),
         TextFormField(

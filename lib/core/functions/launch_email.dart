@@ -22,6 +22,8 @@ Future<void> sendMail({
     'https://mail.google.com/mail/?view=cm&to=$email&su=$encodedSubject&body=$encodedBody',
   );
 
+  await launchUrl(mailto);
+
   if (await canLaunchUrl(gmailApp)) {
     await launchUrl(gmailApp);
     return;
@@ -31,6 +33,4 @@ Future<void> sendMail({
     await launchUrl(gmailWeb, mode: LaunchMode.externalApplication);
     return;
   }
-
-  await launchUrl(mailto);
 }

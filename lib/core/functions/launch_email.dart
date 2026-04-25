@@ -10,16 +10,16 @@ Future<void> sendMail({
   final encodedSubject = Uri.encodeComponent(subject);
   final encodedBody = Uri.encodeComponent(body);
 
+  final mailto = Uri.parse(
+    'mailto:$email?subject=$encodedSubject&body=$encodedBody',
+  );
+
   final gmailApp = Uri.parse(
     'googlegmail://co?to=$email&subject=$encodedSubject&body=$encodedBody',
   );
 
   final gmailWeb = Uri.parse(
     'https://mail.google.com/mail/?view=cm&to=$email&su=$encodedSubject&body=$encodedBody',
-  );
-
-  final mailto = Uri.parse(
-    'mailto:$email?subject=$encodedSubject&body=$encodedBody',
   );
 
   if (await canLaunchUrl(gmailApp)) {

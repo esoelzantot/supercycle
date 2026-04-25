@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:supercycle_site/core/functions/lanuch_whatsApp.dart';
 import 'package:supercycle_site/core/functions/launch_email.dart';
 import 'package:supercycle_site/core/helpers/custom_dropdown.dart';
-import 'package:supercycle_site/core/helpers/share_booking_dialog.dart';
+import 'package:supercycle_site/core/helpers/send_message_dialog.dart';
 import 'package:supercycle_site/core/theme/app_colors.dart';
 import 'package:supercycle_site/core/theme/app_styles.dart';
 import 'package:supercycle_site/features/home/data/content/social_channels_data.dart';
@@ -40,7 +40,7 @@ class _FormSideState extends State<FormSide> {
     if (_formKey.currentState!.validate()) {
       final ShareMethod? method = await showDialog<ShareMethod>(
         context: context,
-        builder: (_) => const ShareBookingDialog(),
+        builder: (_) => const SendMessageDialog(),
       );
 
       if (method == null || !mounted) return;
@@ -54,7 +54,7 @@ class _FormSideState extends State<FormSide> {
           );
           break;
         case ShareMethod.email:
-          if (!kIsWeb) {
+          if (kIsWeb) {
             await sendEmail(
               email: Channels.email,
               subject: "مشاركة تأكيد الحجز",

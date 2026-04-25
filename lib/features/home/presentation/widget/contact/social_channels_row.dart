@@ -277,7 +277,7 @@ void handleOnTap({required String label, required BuildContext context}) async {
       launchUrlFunc(Channels.linkedin);
       break;
     case 'Email':
-      if (!kIsWeb) {
+      if (kIsWeb) {
         await sendEmail(
           email: Channels.email,
           subject: "مشاركة تأكيد الحجز",

@@ -1,4 +1,4 @@
-// share_booking_dialog.dart
+// send_message_dialog.dart
 
 import 'package:flutter/material.dart';
 import 'package:supercycle_site/core/theme/app_colors.dart';
@@ -7,14 +7,14 @@ import 'package:supercycle_site/generated/l10n.dart';
 
 enum ShareMethod { whatsapp, email }
 
-class ShareBookingDialog extends StatefulWidget {
-  const ShareBookingDialog({super.key});
+class SendMessageDialog extends StatefulWidget {
+  const SendMessageDialog({super.key});
 
   @override
-  State<ShareBookingDialog> createState() => _ShareBookingDialogState();
+  State<SendMessageDialog> createState() => _SendMessageDialogState();
 }
 
-class _ShareBookingDialogState extends State<ShareBookingDialog> {
+class _SendMessageDialogState extends State<SendMessageDialog> {
   ShareMethod _selected = ShareMethod.whatsapp;
 
   @override

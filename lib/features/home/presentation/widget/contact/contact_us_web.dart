@@ -41,8 +41,8 @@ class ContactUsWeb extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           child: Row(
             children: [
-              Expanded(flex: 3, child: FormSide()),
               Expanded(flex: 3, child: InfoSide()),
+              Expanded(flex: 3, child: FormSide()),
             ],
           ),
         ),

@@ -22,6 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "app_waiting_dialog_badge": MessageLookupByLibrary.simpleMessage("قريباً"),
+    "app_waiting_dialog_body": MessageLookupByLibrary.simpleMessage(
+      "تطبيق سوبر سايكل في مراحله الأخيرة ليمنحك تجربة بيع وشراء أسرع وأذكى. انتظرنا قريباً على المتاجر!",
+    ),
+    "app_waiting_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "استعد لتطوير تجارتك!",
+    ),
     "contact_tab": MessageLookupByLibrary.simpleMessage("التواصل"),
     "contact_us_btn": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
     "contact_us_desc": MessageLookupByLibrary.simpleMessage(
@@ -37,6 +44,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "contact_us_subject": MessageLookupByLibrary.simpleMessage("الموضوع"),
     "contact_us_title": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
     "download_btn": MessageLookupByLibrary.simpleMessage("نزله الأن"),
+    "footer_Copyright": MessageLookupByLibrary.simpleMessage(
+      "جميع الحقوق محفوظة لشركة سوبر سايكل © 2026",
+    ),
+    "footer_brief": MessageLookupByLibrary.simpleMessage(
+      "سوبر سايكل هي المنصة الرقمية الأولى المتخصصة في تنظيم وتطوير قطاع تجارة الدشت وإعادة التدوير. نربط بذكاء بين التجار والموردين والمناديب لضمان دورة تجارية سريعة، شفافة، ومستدامة.",
+    ),
+    "footer_download_app": MessageLookupByLibrary.simpleMessage(
+      "حمّل التطبيق الآن",
+    ),
     "hero_desc": MessageLookupByLibrary.simpleMessage(
       "سوبر سايكل يجمع التجار والموردين والمناديب في مكان واحد. نظّم دورتك التجارية، تتبع الأسعار لحظياً، وحوّل عملك التقليدي إلى نظام رقمي متكامل يضمن لك الكفاءة والربح",
     ),

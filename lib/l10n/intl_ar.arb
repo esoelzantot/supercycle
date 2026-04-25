@@ -26,5 +26,12 @@
   "send_message_dialog_whatsapp_option": "إرسال عبر الواتساب",
   "send_message_dialog_email_option": "إرسال عبر الايميل",
   "send_message_dialog_send_button": "إرسال",
-  "send_message_dialog_cancel_button": "إلغاء"
+  "send_message_dialog_cancel_button": "إلغاء",
+
+  "footer_brief": "سوبر سايكل هي المنصة الرقمية الأولى المتخصصة في تنظيم وتطوير قطاع تجارة الدشت وإعادة التدوير. نربط بذكاء بين التجار والموردين والمناديب لضمان دورة تجارية سريعة، شفافة، ومستدامة.",
+  "footer_download_app": "حمّل التطبيق الآن",
+  "footer_Copyright": "جميع الحقوق محفوظة لشركة سوبر سايكل © 2026",
+  "app_waiting_dialog_title": "استعد لتطوير تجارتك!",
+  "app_waiting_dialog_badge": "قريباً",
+  "app_waiting_dialog_body": "تطبيق سوبر سايكل في مراحله الأخيرة ليمنحك تجربة بيع وشراء أسرع وأذكى. انتظرنا قريباً على المتاجر!"
 }

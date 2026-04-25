@@ -22,6 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "app_waiting_dialog_badge": MessageLookupByLibrary.simpleMessage("SOON"),
+    "app_waiting_dialog_body": MessageLookupByLibrary.simpleMessage(
+      "Super Cycle is in its final stages to bring you a smarter and faster trading experience. Stay tuned, we’re launching soon!",
+    ),
+    "app_waiting_dialog_title": MessageLookupByLibrary.simpleMessage(
+      "Get Ready to Transform Your Trade",
+    ),
     "contact_tab": MessageLookupByLibrary.simpleMessage("Contact"),
     "contact_us_btn": MessageLookupByLibrary.simpleMessage("Contact Us"),
     "contact_us_desc": MessageLookupByLibrary.simpleMessage("Contact Us Now"),
@@ -33,6 +40,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "contact_us_subject": MessageLookupByLibrary.simpleMessage("Subject"),
     "contact_us_title": MessageLookupByLibrary.simpleMessage("Contact Us"),
     "download_btn": MessageLookupByLibrary.simpleMessage("Download Now"),
+    "footer_Copyright": MessageLookupByLibrary.simpleMessage(
+      "© 2026 Super Cycle. All rights reserved.",
+    ),
+    "footer_brief": MessageLookupByLibrary.simpleMessage(
+      "Super Cycle is the premier digital platform dedicated to streamlining the scrap trade and recycling industry. We bridge the gap between traders, suppliers, and delegates to ensure a fast, transparent, and sustainable trading cycle.",
+    ),
+    "footer_download_app": MessageLookupByLibrary.simpleMessage("Get the App"),
     "hero_desc": MessageLookupByLibrary.simpleMessage(
       "Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency",
     ),

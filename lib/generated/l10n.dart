@@ -258,6 +258,66 @@ class S {
       args: [],
     );
   }
+
+  /// `Super Cycle is the premier digital platform dedicated to streamlining the scrap trade and recycling industry. We bridge the gap between traders, suppliers, and delegates to ensure a fast, transparent, and sustainable trading cycle.`
+  String get footer_brief {
+    return Intl.message(
+      'Super Cycle is the premier digital platform dedicated to streamlining the scrap trade and recycling industry. We bridge the gap between traders, suppliers, and delegates to ensure a fast, transparent, and sustainable trading cycle.',
+      name: 'footer_brief',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get the App`
+  String get footer_download_app {
+    return Intl.message(
+      'Get the App',
+      name: 'footer_download_app',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `© 2026 Super Cycle. All rights reserved.`
+  String get footer_Copyright {
+    return Intl.message(
+      '© 2026 Super Cycle. All rights reserved.',
+      name: 'footer_Copyright',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Ready to Transform Your Trade`
+  String get app_waiting_dialog_title {
+    return Intl.message(
+      'Get Ready to Transform Your Trade',
+      name: 'app_waiting_dialog_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `SOON`
+  String get app_waiting_dialog_badge {
+    return Intl.message(
+      'SOON',
+      name: 'app_waiting_dialog_badge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Super Cycle is in its final stages to bring you a smarter and faster trading experience. Stay tuned, we’re launching soon!`
+  String get app_waiting_dialog_body {
+    return Intl.message(
+      'Super Cycle is in its final stages to bring you a smarter and faster trading experience. Stay tuned, we’re launching soon!',
+      name: 'app_waiting_dialog_body',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -26,5 +26,12 @@
   "send_message_dialog_whatsapp_option": "Send via WhatsApp",
   "send_message_dialog_email_option": "Send via Email",
   "send_message_dialog_send_button": "Send",
-  "send_message_dialog_cancel_button": "Cancel"
+  "send_message_dialog_cancel_button": "Cancel",
+
+  "footer_brief": "Super Cycle is the premier digital platform dedicated to streamlining the scrap trade and recycling industry. We bridge the gap between traders, suppliers, and delegates to ensure a fast, transparent, and sustainable trading cycle.",
+  "footer_download_app": "Get the App",
+  "footer_Copyright": "© 2026 Super Cycle. All rights reserved.",
+  "app_waiting_dialog_title": "Get Ready to Transform Your Trade",
+  "app_waiting_dialog_badge": "SOON",
+  "app_waiting_dialog_body": "Super Cycle is in its final stages to bring you a smarter and faster trading experience. Stay tuned, we’re launching soon!"
 }

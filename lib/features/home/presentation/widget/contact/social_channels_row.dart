@@ -57,19 +57,21 @@ class SocialChannelsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      crossAxisAlignment: WrapCrossAlignment.center,
-      children: List.generate(_channels.length, (i) {
-        final ch = _channels[i];
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: List.generate(_channels.length, (i) {
+          final ch = _channels[i];
 
-        return Padding(
-          padding: EdgeInsets.only(right: 10),
-          child: style == SocialStyle.chip
-              ? _ChipButton(channel: ch)
-              : _DotButton(channel: ch),
-        );
-      }),
+          return Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: style == SocialStyle.chip
+                ? _ChipButton(channel: ch)
+                : _DotButton(channel: ch),
+          );
+        }),
+      ),
     );
   }
 }

@@ -13,17 +13,38 @@ class HomeScreenWeb extends StatefulWidget {
 }
 
 class _HomeScreenWebState extends State<HomeScreenWeb> {
+  final _scrollController = ScrollController();
+  final _contactKey = GlobalKey();
+
+  void _scrollToContact() {
+    final ctx = _contactKey.currentContext;
+    if (ctx == null) return;
+    Scrollable.ensureVisible(
+      ctx,
+      duration: const Duration(milliseconds: 600),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: HomeScreenHeader(),
       body: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(child: WebHeroSection()),
+          SliverToBoxAdapter(
+            child: WebHeroSection(onContactTap: _scrollToContact),
+          ),
           SliverToBoxAdapter(child: SizedBox(height: 56)),
           SliverToBoxAdapter(child: VisionAndMissionWeb()),
           SliverToBoxAdapter(child: SizedBox(height: 56)),
-          SliverToBoxAdapter(child: ContactUsWeb()),
+          SliverToBoxAdapter(child: ContactUsWeb(key: _contactKey)),
           SliverToBoxAdapter(child: SizedBox(height: 56)),
           SliverToBoxAdapter(child: HomeFooterWeb()),
         ],

@@ -5,12 +5,11 @@ import 'package:supercycle_site/core/cubits/local_cubit.dart';
 class LanguageMenuItem extends StatefulWidget {
   const LanguageMenuItem({
     super.key,
-    required this.flag,
     required this.label,
     required this.code,
   });
 
-  final String flag;
+  // ✅ اتشال الـ flag parameter
   final String label;
   final String code;
 
@@ -25,9 +24,8 @@ class _LanguageMenuItemState extends State<LanguageMenuItem> {
   Widget build(BuildContext context) {
     return BlocBuilder<LocalCubit, LocalState>(
       builder: (context, state) {
-        final currentLang = state is ChangeLocalState
-            ? state.locale.languageCode
-            : 'en';
+        final currentLang =
+        state is ChangeLocalState ? state.locale.languageCode : 'en';
         final isSelected = currentLang == widget.code;
 
         return MouseRegion(
@@ -47,13 +45,34 @@ class _LanguageMenuItemState extends State<LanguageMenuItem> {
             ),
             child: Row(
               children: [
-                Text(widget.flag, style: const TextStyle(fontSize: 20)),
+                // ✅ Code Badge بدل الـ flag - static تماماً، مفيش تحميل
+                Container(
+                  width: 32,
+                  height: 22,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: isSelected
+                        ? const Color(0xFF3D3D8F)
+                        : const Color(0xFFE8E8F0),
+                    borderRadius: BorderRadius.circular(4),
+                  ),
+                  child: Text(
+                    widget.code.toUpperCase(), // "EN" أو "AR"
+                    style: TextStyle(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w700,
+                      color: isSelected ? Colors.white : const Color(0xFF5A5A6E),
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                ),
                 const SizedBox(width: 12),
                 Text(
                   widget.label,
                   style: TextStyle(
                     fontSize: 14,
-                    fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
+                    fontWeight:
+                    isSelected ? FontWeight.w600 : FontWeight.w400,
                     color: isSelected
                         ? const Color(0xFF3D3D8F)
                         : const Color(0xFF5A5A6E),

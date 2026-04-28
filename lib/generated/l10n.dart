@@ -199,6 +199,16 @@ class S {
     );
   }
 
+  /// `Message Sent`
+  String get msg_sent_btn {
+    return Intl.message(
+      'Message Sent',
+      name: 'msg_sent_btn',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Send Message Confirmation`
   String get send_message_dialog_title {
     return Intl.message(

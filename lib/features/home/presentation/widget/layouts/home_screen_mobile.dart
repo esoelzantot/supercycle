@@ -13,18 +13,36 @@ class HomeScreenMobile extends StatefulWidget {
 }
 
 class _HomeScreenMobileState extends State<HomeScreenMobile> {
+  final _scrollController = ScrollController();
+  final _contactKey = GlobalKey();
+
+  void _scrollToContact() {
+    final ctx = _contactKey.currentContext;
+    if (ctx == null) return;
+    Scrollable.ensureVisible(
+      ctx,
+      duration: const Duration(milliseconds: 600),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         // ── Main Content ──────────────────────────────────────
         CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: MobileHeroSection(paddingTop: 90)),
+          slivers: [SliverToBoxAdapter(child: MobileHeroSection(paddingTop: 90, onContactTap: _scrollToContact)),
+
             SliverToBoxAdapter(child: SizedBox(height: 56)),
             SliverToBoxAdapter(child: VisionAndMissionMobile()),
             SliverToBoxAdapter(child: SizedBox(height: 56)),
-            SliverToBoxAdapter(child: ContactUsMobile()),
+            SliverToBoxAdapter(child: ContactUsMobile(key: _contactKey,)),
             SliverToBoxAdapter(child: SizedBox(height: 56)),
             SliverToBoxAdapter(child: HomeFooterMobile()),
           ],

@@ -44,24 +44,75 @@ class _FormSideState extends State<FormSide> {
 
       if (method == null || !mounted) return;
 
+      String message = generateFormattedMsg(
+        name: _nameController.text,
+        email: _emailController.text,
+        subject: _selectedSubject,
+        message: _messageController.text,
+      );
+
       switch (method) {
         case ShareMethod.whatsapp:
           openWhatsApp(
             context: context,
             phone: Channels.whatsapp,
-            content: "Hell0000",
+            content: message,
           );
           break;
         case ShareMethod.email:
           await sendMail(
             email: Channels.email,
-            subject: "مشاركة تأكيد الحجز",
-            body: "Hell0000",
+            subject: "استفسار",
+            body: message,
             context: context,
           );
       }
-      setState(() => _submitted = true);
+      // setState(() => _submitted = true);
     }
+  }
+
+  String generateFormattedMsg({
+    required String name,
+    required String email,
+    required String subject,
+    required String message,
+  }) {
+    final now = DateTime.now();
+    final formattedDate =
+        '${now.day.toString().padLeft(2, '0')}/'
+        '${now.month.toString().padLeft(2, '0')}/'
+        '${now.year}';
+
+    return '''
+السادة فريق الدعم،
+
+أتمنى أن تكونوا بخير. أتواصل معكم لتقديم الاستفسار التالي:
+
+────────────────────────────
+ بيانات التواصل
+────────────────────────────
+- الاسم        : $name
+- البريد الإلكتروني : $email
+- التاريخ      : $formattedDate
+
+────────────────────────────
+ الموضوع
+────────────────────────────
+$subject
+
+────────────────────────────
+ تفاصيل الرسالة
+────────────────────────────
+$message
+
+────────────────────────────
+
+شكراً جزيلاً على وقتكم واهتمامكم، وأتطلع إلى ردكم الكريم.
+
+مع خالص التحية،
+$name
+'''
+        .trim();
   }
 
   @override
@@ -171,7 +222,7 @@ class _FormSideState extends State<FormSide> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'الموضوع',
+          S.of(context).contact_us_subject,
           style: AppStyles.styleSemiBold20(
             context,
           ).copyWith(color: Color(0xFF666666)),
@@ -227,7 +278,9 @@ class _FormSideState extends State<FormSide> {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  _submitted ? 'تم الإرسال!' : 'إرسال الرسالة',
+                  _submitted
+                      ? S.of(context).msg_sent_btn
+                      : S.of(context).send_msg_btn,
                   style: AppStyles.styleBold18(
                     context,
                   ).copyWith(color: Colors.white),

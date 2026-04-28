@@ -11,7 +11,14 @@ import 'package:supercycle_site/generated/l10n.dart';
 // ─────────────────────────────────────────────
 class MobileHeroSection extends StatefulWidget {
   final double paddingTop;
-  const MobileHeroSection({super.key, this.paddingTop = 0.0});
+
+  final VoidCallback? onContactTap;
+
+  const MobileHeroSection({
+    super.key,
+    this.paddingTop = 0.0,
+    this.onContactTap,
+  });
 
   @override
   State<MobileHeroSection> createState() => _MobileHeroSectionState();
@@ -76,7 +83,7 @@ class _MobileHeroSectionState extends State<MobileHeroSection>
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      _CopyBlock(),
+                      _CopyBlock(onContactTap: widget.onContactTap),
                       const SizedBox(height: 12),
                       _PhoneScreen(),
                     ],
@@ -99,7 +106,6 @@ class _BlobLayer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final h = MediaQuery.of(context).size.height;
     return Positioned.fill(
       child: Stack(
         children: [
@@ -161,6 +167,9 @@ class _BlobLayer extends StatelessWidget {
 //  COPY BLOCK (left side)
 // ─────────────────────────────────────────────
 class _CopyBlock extends StatelessWidget {
+  final VoidCallback? onContactTap;
+
+  const _CopyBlock({this.onContactTap});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -193,7 +202,10 @@ class _CopyBlock extends StatelessWidget {
           spacing: 12,
           runSpacing: 12,
           children: [
-            PrimaryButton(label: S.of(context).contact_us_btn, onTap: () {}),
+            PrimaryButton(
+              label: S.of(context).contact_us_btn,
+              onTap: onContactTap ?? () {},
+            ),
             GhostButton(
               label: S.of(context).download_btn,
               onTap: () => AppWaitingDialog.show(context),

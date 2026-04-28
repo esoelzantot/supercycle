@@ -23,15 +23,16 @@ class LangActionBtn extends StatefulWidget {
 class _LangActionBtnState extends State<LangActionBtn> {
   bool _hovered = false;
 
+  // ✅ اتشالت الـ flag - بس code و label
   static const _languages = [
-    {'code': 'en', 'label': 'English', 'flag': '🇺🇸'},
-    {'code': 'ar', 'label': 'العربية', 'flag': '🇸🇦'},
+    {'code': 'en', 'label': 'English'},
+    {'code': 'ar', 'label': 'العربية'},
   ];
 
   void _showLanguageMenu(BuildContext context) async {
     final RenderBox button = context.findRenderObject() as RenderBox;
     final RenderBox overlay =
-        Overlay.of(context).context.findRenderObject() as RenderBox;
+    Overlay.of(context).context.findRenderObject() as RenderBox;
 
     final RelativeRect position = RelativeRect.fromRect(
       Rect.fromPoints(
@@ -59,7 +60,6 @@ class _LangActionBtnState extends State<LangActionBtn> {
           value: lang['code'],
           padding: EdgeInsets.zero,
           child: LanguageMenuItem(
-            flag: lang['flag']!,
             label: lang['label']!,
             code: lang['code']!,
           ),
@@ -95,17 +95,17 @@ class _LangActionBtnState extends State<LangActionBtn> {
                   Icons.language_rounded,
                   size: widget.iconSize,
                   color: _hovered
-                      ? Color(0xFF3D4A5C).withValues(alpha: 0.7)
+                      ? const Color(0xFF3D4A5C).withValues(alpha: 0.7)
                       : widget.iconColor,
                 ),
-                if (widget.showLabel) SizedBox(width: 8),
+                if (widget.showLabel) const SizedBox(width: 8),
                 if (widget.showLabel)
                   Text(
                     S.of(context).lang_btn,
                     style: AppStyles.styleMedium18(context).copyWith(
                       color: _hovered
-                          ? Color(0xFF3D4A5C).withValues(alpha: 0.7)
-                          : Color(0xFF3D4A5C),
+                          ? const Color(0xFF3D4A5C).withValues(alpha: 0.7)
+                          : const Color(0xFF3D4A5C),
                     ),
                   ),
               ],

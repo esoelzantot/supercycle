@@ -6,25 +6,9 @@ import 'package:supercycle_site/features/home/presentation/widget/buttons/ghost_
 import 'package:supercycle_site/features/home/presentation/widget/buttons/primary_button.dart';
 import 'package:supercycle_site/generated/l10n.dart';
 
-// ─────────────────────────────────────────────
-//  THEME TOKENS
-// ─────────────────────────────────────────────
-class _AppColors {
-  static const background = Color(0xFFF7F5FF);
-  static const primary = Color(0xFF7C3AED);
-  static const primaryLight = Color(0xFFEDE9FE);
-  static const teal = Color(0xFF5EEAD4);
-  static const lavender = Color(0xFFC4B5FD);
-  static const lavenderLight = Color(0xFFDDD6FE);
-  static const textDark = Color(0xFF1A1333);
-  static const textMuted = Color(0xFF6B6580);
-}
-
-// ─────────────────────────────────────────────
-//  PUBLIC WIDGET
-// ─────────────────────────────────────────────
 class WebHeroSection extends StatefulWidget {
-  const WebHeroSection({super.key});
+  final VoidCallback? onContactTap;
+  const WebHeroSection({super.key, this.onContactTap});
 
   @override
   State<WebHeroSection> createState() => _WebHeroSectionState();
@@ -89,7 +73,10 @@ class _WebHeroSectionState extends State<WebHeroSection>
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Expanded(flex: 3, child: _CopyBlock()),
+                      Expanded(
+                        flex: 3,
+                        child: _CopyBlock(onContactTap: widget.onContactTap),
+                      ),
                       const SizedBox(width: 48),
                       _PhoneScreen(),
                       const SizedBox(width: 48),
@@ -175,6 +162,9 @@ class _BlobLayer extends StatelessWidget {
 //  COPY BLOCK (left side)
 // ─────────────────────────────────────────────
 class _CopyBlock extends StatelessWidget {
+  final VoidCallback? onContactTap;
+
+  const _CopyBlock({this.onContactTap});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -204,7 +194,10 @@ class _CopyBlock extends StatelessWidget {
           spacing: 12,
           runSpacing: 12,
           children: [
-            PrimaryButton(label: S.of(context).contact_us_btn, onTap: () {}),
+            PrimaryButton(
+              label: S.of(context).contact_us_btn,
+              onTap: onContactTap ?? () {},
+            ),
             GhostButton(
               label: S.of(context).download_btn,
               onTap: () => AppWaitingDialog.show(context),

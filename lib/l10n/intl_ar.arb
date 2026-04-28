@@ -20,6 +20,7 @@
   "contact_us_subject": "الموضوع",
   "contact_us_message": "الرسالة",
   "send_msg_btn": "إرسال الرسالة",
+  "msg_sent_btn": "تم الإرسال",
 
   "send_message_dialog_title": "تأكيد إرسال الرسالة",
   "send_message_dialog_subtitle": "اختر طريقة الإرسال",

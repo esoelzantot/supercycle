@@ -20,6 +20,7 @@
   "contact_us_subject": "Subject",
   "contact_us_message": "Message",
   "send_msg_btn": "Send Message",
+  "msg_sent_btn": "Message Sent",
 
   "send_message_dialog_title": "Send Message Confirmation",
   "send_message_dialog_subtitle": "Choose Sending Method",

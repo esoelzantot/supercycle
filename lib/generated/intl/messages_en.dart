@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "lang_btn": MessageLookupByLibrary.simpleMessage("Language"),
     "mission_tab": MessageLookupByLibrary.simpleMessage("Mission"),
+    "msg_sent_btn": MessageLookupByLibrary.simpleMessage("Message Sent"),
     "send_message_dialog_cancel_button": MessageLookupByLibrary.simpleMessage(
       "Cancel",
     ),

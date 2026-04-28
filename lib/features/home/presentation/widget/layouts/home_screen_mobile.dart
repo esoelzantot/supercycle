@@ -42,7 +42,7 @@ class _HomeScreenMobileState extends State<HomeScreenMobile> {
             SliverToBoxAdapter(child: SizedBox(height: 56)),
             SliverToBoxAdapter(child: VisionAndMissionMobile()),
             SliverToBoxAdapter(child: SizedBox(height: 56)),
-            SliverToBoxAdapter(child: ContactUsMobile(key: _contactKey,)),
+            SliverToBoxAdapter(child: ContactUsMobile(key: _contactKey,isMobile: true,)),
             SliverToBoxAdapter(child: SizedBox(height: 56)),
             SliverToBoxAdapter(child: HomeFooterMobile()),
           ],

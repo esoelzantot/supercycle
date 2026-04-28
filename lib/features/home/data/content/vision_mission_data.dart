@@ -12,9 +12,9 @@ final List<CardData> cards = [
     enSubtitle: 'Smart Connectivity',
     arSubtitle: 'ربط ذكي وكفاءة',
     arBody:
-        'أن نكون المنصة الرقمية الرائدة التي تقود التحول الذكي في قطاع إعادة التدوير، معززين قيمة الموارد المهدرة لنبني معاً مستقبلاً بيئياً واقتصادياً مستداماً.',
+        'أن نكون المحرك الرقمي الأول لتجارة الكرتون والورق في المنطقة، من خلال قيادة التحول الذكي في هذا القطاع لتعظيم قيمة الموارد المهدورة وبناء مستقبل اقتصادي وبيئي مستدام',
     enBody:
-        'To be the leading digital catalyst driving the smart transformation of the recycling industry, maximizing the value of scrap materials to build a sustainable green economy for future generations.',
+        'To be the leading digital driver for the cardboard and paper trade in the region, by spearheading smart transformation in the sector to maximize resource value and build a sustainable economic and environmental future.',
     gradientColors: const [
       Color(0xFF185FA5),
       Color(0xFF378ADD),
@@ -31,9 +31,9 @@ final List<CardData> cards = [
     enSubtitle: 'Digital Leadership',
     arSubtitle: 'ريادة رقمية',
     arBody:
-        "تمكين مجتمع تجارة 'الدشت' من خلال حلول تقنية مبتكرة تربط الموردين والتجار والمناديب في بيئة عمل شفافة وعادلة، لضمان سرعة التنفيذ، زيادة الأرباح، ودعم الاقتصاد الأخضر بأعلى معايير الكفاءة.",
+        "تمكين موردي وتجار الكرتون والورق عبر تطبيق مبتكر يوفر حلولاً تقنية متكاملة تضمن الشفافية، العدالة، وسرعة التنفيذ؛ لرفع كفاءة التوريد وتحقيق أقصى عوائد ربحية لمستخدمينا.",
     enBody:
-        'To empower the recycling trade community through innovative tech solutions that seamlessly connect suppliers, traders, and delegates. We are committed to ensuring transparency, maximizing profitability, and streamlining operations for a cleaner environment and a more efficient market.',
+        "To empower cardboard and paper suppliers and traders through an innovative app that provides integrated technical solutions ensuring transparency, fairness, and swift execution; enhancing supply efficiency and maximizing users' profit",
     gradientColors: const [
       Color(0xFF0F6E56),
       Color(0xFF1D9E75),

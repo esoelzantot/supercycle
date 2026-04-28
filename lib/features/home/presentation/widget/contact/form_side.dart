@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:supercycle_site/core/cubits/local_cubit.dart';
 import 'package:supercycle_site/core/functions/lanuch_whatsApp.dart';
 import 'package:supercycle_site/core/functions/launch_email.dart';
 import 'package:supercycle_site/core/helpers/custom_dropdown.dart';
@@ -9,7 +11,8 @@ import 'package:supercycle_site/features/home/data/content/social_channels_data.
 import 'package:supercycle_site/generated/l10n.dart';
 
 class FormSide extends StatefulWidget {
-  const FormSide({super.key});
+  final bool isMobile;
+  const FormSide({super.key, this.isMobile = false});
 
   @override
   State<FormSide> createState() => _FormSideState();
@@ -25,7 +28,12 @@ class _FormSideState extends State<FormSide> {
 
   static const _green = Color(0xFF1B6B3A);
 
-  final _subjects = ['استفسار تجاري', 'دعم فني', 'أخرى'];
+
+  // Arabic Version
+  final _subjectsAr = ['استفسار تجاري', 'دعم فني', 'أخرى'];
+
+// English Version
+  final _subjectsEn = ['Business Inquiry', 'Technical Support', 'Other'];
 
   @override
   void dispose() {
@@ -67,7 +75,7 @@ class _FormSideState extends State<FormSide> {
             context: context,
           );
       }
-      // setState(() => _submitted = true);
+      setState(() => _submitted = true);
     }
   }
 
@@ -117,6 +125,11 @@ $name
 
   @override
   Widget build(BuildContext context) {
+    // ✅ قراءة الـ locale من LocalCubit
+    final state = context.watch<LocalCubit>().state;
+    final bool isArabic = state is ChangeLocalState
+        ? state.locale.languageCode == 'ar'
+        : false;
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.all(36),
@@ -125,13 +138,29 @@ $name
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+            widget.isMobile ?
+            Column(
+              children: [
+                _buildField(
+                  S.of(context).contact_us_name,
+                  _nameController,
+                  hint: S.of(context).contact_us_name_hint,
+                ),
+                const SizedBox(height: 16),
+                _buildField(
+                  S.of(context).contact_us_email,
+                  _emailController,
+                  hint: S.of(context).contact_us_email_hint,
+                  isLtr: true,
+                ),
+              ],
+            ) : Row(
               children: [
                 Expanded(
                   child: _buildField(
                     S.of(context).contact_us_name,
                     _nameController,
-                    hint: 'أدخل اسمك هنا',
+                    hint: S.of(context).contact_us_name_hint,
                   ),
                 ),
                 const SizedBox(width: 16),
@@ -139,19 +168,19 @@ $name
                   child: _buildField(
                     S.of(context).contact_us_email,
                     _emailController,
-                    hint: 'example@email.com',
+                    hint: S.of(context).contact_us_email_hint,
                     isLtr: true,
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 12),
-            _buildDropdown(),
+            _buildDropdown(isArabic: isArabic),
             const SizedBox(height: 4),
             _buildField(
               S.of(context).contact_us_message,
               _messageController,
-              hint: 'كيف يمكننا مساعدتك؟',
+              hint: S.of(context).contact_us_message_hint,
               maxLines: 5,
             ),
             const SizedBox(height: 24),
@@ -185,8 +214,6 @@ $name
         TextFormField(
           controller: ctrl,
           maxLines: maxLines,
-          textDirection: isLtr ? TextDirection.ltr : TextDirection.rtl,
-          textAlign: isLtr ? TextAlign.left : TextAlign.right,
           style: AppStyles.styleMedium16(context),
           decoration: InputDecoration(
             hintText: hint,
@@ -217,7 +244,7 @@ $name
     );
   }
 
-  Widget _buildDropdown() {
+  Widget _buildDropdown({required bool isArabic}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -229,8 +256,9 @@ $name
         ),
         const SizedBox(height: 6),
         CustomDropdown(
+          hintText: S.of(context).contact_us_subject_hint,
           initialValue: _selectedSubject,
-          options: _subjects,
+          options: isArabic ? _subjectsAr : _subjectsEn ,
           onChanged: (v) => setState(() => _selectedSubject = v!),
         ),
         const SizedBox(height: 16),

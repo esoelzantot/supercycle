@@ -3,7 +3,8 @@ import 'package:supercycle_site/features/home/presentation/widget/contact/form_s
 import 'package:supercycle_site/features/home/presentation/widget/contact/info_side.dart';
 
 class ContactUsMobile extends StatelessWidget {
-  const ContactUsMobile({super.key});
+  final bool isMobile;
+  const ContactUsMobile({super.key, this.isMobile = false});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class ContactUsMobile extends StatelessWidget {
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: Column(children: [InfoSide(), FormSide()]),
+            child: Column(children: [InfoSide(), FormSide(isMobile: isMobile,)]),
           ),
         ),
       ),

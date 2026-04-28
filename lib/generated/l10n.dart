@@ -99,20 +99,20 @@ class S {
     );
   }
 
-  /// `The Ultimate Platform for Recycling Trade Management`
+  /// `Super Cycle App: The Ultimate Solution for Cardboard and Paper Trade Management.`
   String get hero_title {
     return Intl.message(
-      'The Ultimate Platform for Recycling Trade Management',
+      'Super Cycle App: The Ultimate Solution for Cardboard and Paper Trade Management.',
       name: 'hero_title',
       desc: '',
       args: [],
     );
   }
 
-  /// `Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency`
+  /// `Transform your business into an integrated digital system with a single touch. Super Cycle app empowers suppliers and traders to track real-time market prices, organize supply cycles, and maximize profits directly from your smartphone.`
   String get hero_desc {
     return Intl.message(
-      'Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency',
+      'Transform your business into an integrated digital system with a single touch. Super Cycle app empowers suppliers and traders to track real-time market prices, organize supply cycles, and maximize profits directly from your smartphone.',
       name: 'hero_desc',
       desc: '',
       args: [],
@@ -129,10 +129,10 @@ class S {
     );
   }
 
-  /// `Contact Us Now`
+  /// `We are here to support your business success. Whether you need technical assistance or want to explore partnership opportunities, our dedicated team is ready to address all your inquiries.`
   String get contact_us_desc {
     return Intl.message(
-      'Contact Us Now',
+      'We are here to support your business success. Whether you need technical assistance or want to explore partnership opportunities, our dedicated team is ready to address all your inquiries.',
       name: 'contact_us_desc',
       desc: '',
       args: [],
@@ -142,6 +142,16 @@ class S {
   /// `Email`
   String get contact_us_email {
     return Intl.message('Email', name: 'contact_us_email', desc: '', args: []);
+  }
+
+  /// `Enter your email here`
+  String get contact_us_email_hint {
+    return Intl.message(
+      'Enter your email here',
+      name: 'contact_us_email_hint',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Phone`
@@ -169,6 +179,16 @@ class S {
     );
   }
 
+  /// `Enter your full name here`
+  String get contact_us_name_hint {
+    return Intl.message(
+      'Enter your full name here',
+      name: 'contact_us_name_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Subject`
   String get contact_us_subject {
     return Intl.message(
@@ -179,11 +199,31 @@ class S {
     );
   }
 
+  /// `Choose a subject`
+  String get contact_us_subject_hint {
+    return Intl.message(
+      'Choose a subject',
+      name: 'contact_us_subject_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Message`
   String get contact_us_message {
     return Intl.message(
       'Message',
       name: 'contact_us_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How can we support your business today`
+  String get contact_us_message_hint {
+    return Intl.message(
+      'How can we support your business today',
+      name: 'contact_us_message_hint',
       desc: '',
       args: [],
     );
@@ -269,10 +309,10 @@ class S {
     );
   }
 
-  /// `Super Cycle is the premier digital platform dedicated to streamlining the scrap trade and recycling industry. We bridge the gap between traders, suppliers, and delegates to ensure a fast, transparent, and sustainable trading cycle.`
+  /// `The premier app dedicated to organizing and advancing the cardboard and paper trade. We connect suppliers with major factories to ensure a smart, transparent, and sustainable trading cycle.`
   String get footer_brief {
     return Intl.message(
-      'Super Cycle is the premier digital platform dedicated to streamlining the scrap trade and recycling industry. We bridge the gap between traders, suppliers, and delegates to ensure a fast, transparent, and sustainable trading cycle.',
+      'The premier app dedicated to organizing and advancing the cardboard and paper trade. We connect suppliers with major factories to ensure a smart, transparent, and sustainable trading cycle.',
       name: 'footer_brief',
       desc: '',
       args: [],

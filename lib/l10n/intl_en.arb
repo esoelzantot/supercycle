@@ -8,17 +8,21 @@
   "contact_us_btn": "Contact Us",
   "download_btn": "Download Now",
 
-  "hero_title": "The Ultimate Platform for Recycling Trade Management",
-  "hero_desc": "Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency",
+  "hero_title": "Super Cycle App: The Ultimate Solution for Cardboard and Paper Trade Management.",
+  "hero_desc": "Transform your business into an integrated digital system with a single touch. Super Cycle app empowers suppliers and traders to track real-time market prices, organize supply cycles, and maximize profits directly from your smartphone.",
 
   "contact_us_title": "Contact Us",
-  "contact_us_desc": "Contact Us Now",
+  "contact_us_desc": "We are here to support your business success. Whether you need technical assistance or want to explore partnership opportunities, our dedicated team is ready to address all your inquiries.",
   "contact_us_email": "Email",
+  "contact_us_email_hint": "Enter your email here",
   "contact_us_phone": "Phone",
   "contact_us_social": "Social Media",
   "contact_us_name": "Full Name",
+  "contact_us_name_hint": "Enter your full name here",
   "contact_us_subject": "Subject",
+  "contact_us_subject_hint": "Choose a subject",
   "contact_us_message": "Message",
+  "contact_us_message_hint": "How can we support your business today",
   "send_msg_btn": "Send Message",
   "msg_sent_btn": "Message Sent",
 
@@ -29,7 +33,7 @@
   "send_message_dialog_send_button": "Send",
   "send_message_dialog_cancel_button": "Cancel",
 
-  "footer_brief": "Super Cycle is the premier digital platform dedicated to streamlining the scrap trade and recycling industry. We bridge the gap between traders, suppliers, and delegates to ensure a fast, transparent, and sustainable trading cycle.",
+  "footer_brief": "The premier app dedicated to organizing and advancing the cardboard and paper trade. We connect suppliers with major factories to ensure a smart, transparent, and sustainable trading cycle.",
   "footer_download_app": "Get the App",
   "footer_Copyright": "© 2026 Super Cycle. All rights reserved.",
   "app_waiting_dialog_title": "Get Ready to Transform Your Trade",

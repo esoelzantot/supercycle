@@ -32,32 +32,44 @@ class MessageLookup extends MessageLookupByLibrary {
     "contact_tab": MessageLookupByLibrary.simpleMessage("التواصل"),
     "contact_us_btn": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
     "contact_us_desc": MessageLookupByLibrary.simpleMessage(
-      "فريقنا للدعم الفني",
+      "نحن هنا لدعم نجاح تجارتك. سواء كنت تحتاج إلى دعم فني، أو ترغب في استكشاف فرص الشراكة، فريقنا المتخصص جاهز للرد على جميع استفساراتك.",
     ),
     "contact_us_email": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني",
     ),
+    "contact_us_email_hint": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدك الإلكتروني هنا",
+    ),
     "contact_us_message": MessageLookupByLibrary.simpleMessage("الرسالة"),
+    "contact_us_message_hint": MessageLookupByLibrary.simpleMessage(
+      "كيف يمكننا دعم تجارتك اليوم؟",
+    ),
     "contact_us_name": MessageLookupByLibrary.simpleMessage("الأسم بالكامل"),
+    "contact_us_name_hint": MessageLookupByLibrary.simpleMessage(
+      "أدخل اسمك بالكامل هنا",
+    ),
     "contact_us_phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
     "contact_us_social": MessageLookupByLibrary.simpleMessage("قنوات التواصل"),
     "contact_us_subject": MessageLookupByLibrary.simpleMessage("الموضوع"),
+    "contact_us_subject_hint": MessageLookupByLibrary.simpleMessage(
+      "اختر الموضوع",
+    ),
     "contact_us_title": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
     "download_btn": MessageLookupByLibrary.simpleMessage("نزله الأن"),
     "footer_Copyright": MessageLookupByLibrary.simpleMessage(
       "جميع الحقوق محفوظة لشركة سوبر سايكل © 2026",
     ),
     "footer_brief": MessageLookupByLibrary.simpleMessage(
-      "سوبر سايكل هي المنصة الرقمية الأولى المتخصصة في تنظيم وتطوير قطاع تجارة الدشت وإعادة التدوير. نربط بذكاء بين التجار والموردين والمناديب لضمان دورة تجارية سريعة، شفافة، ومستدامة.",
+      "التطبيق التقني المتخصص في تنظيم وتطوير تجارة الكرتون والورق. نربط الموردين بكبرى المصانع لضمان دورة تجارية ذكية، شفافة، ومستدامة.",
     ),
     "footer_download_app": MessageLookupByLibrary.simpleMessage(
       "حمّل التطبيق الآن",
     ),
     "hero_desc": MessageLookupByLibrary.simpleMessage(
-      "سوبر سايكل يجمع التجار والموردين والمناديب في مكان واحد. نظّم دورتك التجارية، تتبع الأسعار لحظياً، وحوّل عملك التقليدي إلى نظام رقمي متكامل يضمن لك الكفاءة والربح",
+      "حوّل تجارتك إلى نظام رقمي متكامل بلمسة واحدة. يُمكّن تطبيق سوبر سايكل الموردين والتجار من تتبع أسعار السوق اللحظية، تنظيم دورات التوريد، ومضاعفة الأرباح مباشرة من هاتفك الذكي",
     ),
     "hero_title": MessageLookupByLibrary.simpleMessage(
-      "المنصة الأذكى لإدارة تجارة \"الدشت\" وإعادة التدوير",
+      "تطبيق سوبر سايكل: الحل الأمثل لتجارة وإدارة الكرتون والورق",
     ),
     "lang_btn": MessageLookupByLibrary.simpleMessage("اللغة"),
     "mission_tab": MessageLookupByLibrary.simpleMessage("هدفنا"),

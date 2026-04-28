@@ -31,7 +31,6 @@ class InfoSide extends StatelessWidget {
           const SizedBox(height: 12),
           Text(
             S.of(context).contact_us_desc,
-            textAlign: TextAlign.right,
             style: AppStyles.styleMedium20(
               context,
             ).copyWith(color: Color(0xBFFFFFFF)),

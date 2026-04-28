@@ -31,27 +31,41 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "contact_tab": MessageLookupByLibrary.simpleMessage("Contact"),
     "contact_us_btn": MessageLookupByLibrary.simpleMessage("Contact Us"),
-    "contact_us_desc": MessageLookupByLibrary.simpleMessage("Contact Us Now"),
+    "contact_us_desc": MessageLookupByLibrary.simpleMessage(
+      "We are here to support your business success. Whether you need technical assistance or want to explore partnership opportunities, our dedicated team is ready to address all your inquiries.",
+    ),
     "contact_us_email": MessageLookupByLibrary.simpleMessage("Email"),
+    "contact_us_email_hint": MessageLookupByLibrary.simpleMessage(
+      "Enter your email here",
+    ),
     "contact_us_message": MessageLookupByLibrary.simpleMessage("Message"),
+    "contact_us_message_hint": MessageLookupByLibrary.simpleMessage(
+      "How can we support your business today",
+    ),
     "contact_us_name": MessageLookupByLibrary.simpleMessage("Full Name"),
+    "contact_us_name_hint": MessageLookupByLibrary.simpleMessage(
+      "Enter your full name here",
+    ),
     "contact_us_phone": MessageLookupByLibrary.simpleMessage("Phone"),
     "contact_us_social": MessageLookupByLibrary.simpleMessage("Social Media"),
     "contact_us_subject": MessageLookupByLibrary.simpleMessage("Subject"),
+    "contact_us_subject_hint": MessageLookupByLibrary.simpleMessage(
+      "Choose a subject",
+    ),
     "contact_us_title": MessageLookupByLibrary.simpleMessage("Contact Us"),
     "download_btn": MessageLookupByLibrary.simpleMessage("Download Now"),
     "footer_Copyright": MessageLookupByLibrary.simpleMessage(
       "© 2026 Super Cycle. All rights reserved.",
     ),
     "footer_brief": MessageLookupByLibrary.simpleMessage(
-      "Super Cycle is the premier digital platform dedicated to streamlining the scrap trade and recycling industry. We bridge the gap between traders, suppliers, and delegates to ensure a fast, transparent, and sustainable trading cycle.",
+      "The premier app dedicated to organizing and advancing the cardboard and paper trade. We connect suppliers with major factories to ensure a smart, transparent, and sustainable trading cycle.",
     ),
     "footer_download_app": MessageLookupByLibrary.simpleMessage("Get the App"),
     "hero_desc": MessageLookupByLibrary.simpleMessage(
-      "Super Cycle bridges the gap between traders, suppliers, and delegates. Streamline your operations, track real-time prices, and digitize your waste trading business for maximum efficiency",
+      "Transform your business into an integrated digital system with a single touch. Super Cycle app empowers suppliers and traders to track real-time market prices, organize supply cycles, and maximize profits directly from your smartphone.",
     ),
     "hero_title": MessageLookupByLibrary.simpleMessage(
-      "The Ultimate Platform for Recycling Trade Management",
+      "Super Cycle App: The Ultimate Solution for Cardboard and Paper Trade Management.",
     ),
     "lang_btn": MessageLookupByLibrary.simpleMessage("Language"),
     "mission_tab": MessageLookupByLibrary.simpleMessage("Mission"),
